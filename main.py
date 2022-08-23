@@ -1,5 +1,5 @@
 from utils.json_handler import write_menu_list
-from managemant.tab_handler import calc_menu
+from management.tab_handler import calc_menu
 
 FILEPATH = 'menu.json'
 
