@@ -1,7 +1,7 @@
  
 from datetime import datetime
 from utils.json_handler import read_menu_list
-FILEPATH = 'menu.json'
+
 
 def get_item_menu(filepath: str, id: int):
     items_list = read_menu_list(filepath)
@@ -13,14 +13,14 @@ def get_item_menu(filepath: str, id: int):
     return 'item não encontrado'
 
 
-def calc_menu(table):
+def calc_menu(filepath, table):
     date_time_format = '%d/%m/%Y, %H:%M:%S'
     total = 0
 
     for item in table:
         id = item['id']
         qtd = item['amount']
-        get_item = get_item_menu(FILEPATH, id)
+        get_item = get_item_menu(filepath, id)
         price = get_item['price']
 
         total += price * qtd

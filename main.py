@@ -15,7 +15,7 @@ def main():
       {"id": 21, "amount": 5},
     ]
 
-    return calc_menu(table_1)
+    return calc_menu(FILEPATH, table_1)
 
 if __name__ == "__main__":
     # Utilize essa área para testes com print
